@@ -1,0 +1,23 @@
+# Core ML & Data
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.4.2
+xgboost==2.0.3
+
+# API
+fastapi==0.110.2
+uvicorn==0.29.0
+
+# Data simulation & preprocessing
+faker==25.2.0
+
+# Optional: Jupyter + Visualization (for notebooks/)
+jupyterlab==4.2.1
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Serialization
+joblib==1.4.2
+
+# CORS (if frontend connects to backend)
+python-multipart==0.0.9
