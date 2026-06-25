@@ -9,7 +9,7 @@ Predicts click & conversion probabilities for every ad impression, turns them in
 demand-side platform (DSP) makes millions of times per second.
 
 [![CI](https://github.com/bowiecooper/SmartBidder/actions/workflows/ci.yml/badge.svg)](https://github.com/bowiecooper/SmartBidder/actions/workflows/ci.yml)
-&nbsp;·&nbsp; **[Live demo →](https://REPLACE_ME)** &nbsp;·&nbsp; FastAPI · XGBoost · React
+&nbsp;·&nbsp; **[Live demo →](https://smart-bidder.vercel.app)** &nbsp;·&nbsp; FastAPI · XGBoost · React
 
 <img src="docs/dashboard.png" alt="SmartBidder dashboard" width="900"/>
 
