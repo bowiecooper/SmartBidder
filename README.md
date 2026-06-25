@@ -1,12 +1,11 @@
 <div align="center">
 
-# ◆ SmartBidder
+# SmartBidder
 
 ### A real-time machine-learning engine for optimizing ad bids and audience matching
 
 Predicts click & conversion probabilities for every ad impression, turns them into an
-**expected value**, and computes the **optimal shaded bid** — the same decision a real
-demand-side platform (DSP) makes millions of times per second.
+**expected value**, and computes the **optimal shaded bid** 
 
 [![CI](https://github.com/bowiecooper/SmartBidder/actions/workflows/ci.yml/badge.svg)](https://github.com/bowiecooper/SmartBidder/actions/workflows/ci.yml)
 &nbsp;·&nbsp; **[Live demo →](https://smart-bidder.vercel.app)** &nbsp;·&nbsp; FastAPI · XGBoost · React
@@ -35,20 +34,7 @@ and how much**. SmartBidder implements that decision end to end:
 A streaming simulator replays auctions over a WebSocket so the dashboard shows the engine
 making live decisions, with model-quality and latency telemetry.
 
-## Why it's interesting (engineering highlights)
 
-- **Decisions, not just predictions.** The headline isn't a classifier — it's an
-  expected-value bid optimizer with **bid shading** and **budget pacing**, grounded in auction
-  economics.
-- **Calibration matters.** Probabilities are isotonically calibrated, because the optimizer
-  *multiplies* them as expected value — a high-AUC-but-miscalibrated model would bid wrong.
-- **Genuinely real-time.** A hand-rolled NumPy featurizer + native XGBoost `inplace_predict`
-  replaces scikit-learn's per-call overhead, taking a full bid decision (3 model calls + a
-  40-point bid-grid search) from ~60&nbsp;ms to **~2.5&nbsp;ms p50 / <7&nbsp;ms p99**.
-- **Learnable-by-design synthetic data.** A latent segment↔category **affinity matrix** drives
-  outcomes, so "audience matching" is a real, measurable signal — the CTR model's top features
-  are the audience-segment encodings.
-- **Honest metrics.** AUCs land in realistic adtech ranges (below), not a suspicious 1.0.
 
 ## Model performance
 
