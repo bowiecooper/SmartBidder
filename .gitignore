@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Large generated datasets (regenerate with the data generator); keep the small sample.
+backend/data/ad_auction_data_2*.csv
+
+# Node
+node_modules/
+frontend/build/
+
+# Env / editors
+.env
+.DS_Store
+.idea/
+.vscode/
+
+# Local scratch (screenshot helper kept out of the tree; docs/ images are committed)
+.dev/

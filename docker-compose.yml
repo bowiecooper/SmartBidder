@@ -1,0 +1,27 @@
+# One command to run the whole stack locally:  docker compose up --build
+# Backend (FastAPI) on :8000, dashboard (nginx) on :3000.
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OMP_NUM_THREADS=4
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        REACT_APP_API_URL: "http://localhost:8000"
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

@@ -1,0 +1,153 @@
+{
+  "model_version": "1.0.0",
+  "trained_at": "2026-06-25T20:08:09.209747+00:00",
+  "n_samples": 100000,
+  "features": [
+    "audience_segment",
+    "ad_category",
+    "device_type",
+    "ad_position",
+    "ad_size",
+    "user_gender",
+    "base_cpm",
+    "user_age",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos"
+  ],
+  "category_value": {
+    "electronics": 45.0,
+    "fashion": 30.0,
+    "sports": 25.0,
+    "travel": 90.0,
+    "food": 15.0,
+    "business": 70.0,
+    "education": 50.0,
+    "family": 20.0,
+    "gaming": 35.0
+  },
+  "metrics": {
+    "ctr": {
+      "auc": 0.7187908880074956,
+      "log_loss": 0.26157835125923157,
+      "brier": 0.07153613865375519,
+      "positive_rate": 0.08451428571428571,
+      "n_test": 17500,
+      "calibration_curve": {
+        "mean_predicted": [
+          0.0247,
+          0.0318,
+          0.0362,
+          0.0375,
+          0.0597,
+          0.0725,
+          0.076,
+          0.0877,
+          0.1354,
+          0.281
+        ],
+        "fraction_positive": [
+          0.0309,
+          0.0314,
+          0.0394,
+          0.0514,
+          0.052,
+          0.068,
+          0.0697,
+          0.076,
+          0.1326,
+          0.2937
+        ]
+      }
+    },
+    "cvr": {
+      "auc": 0.6447456924914093,
+      "log_loss": 0.5389496684074402,
+      "brier": 0.17829155921936035,
+      "positive_rate": 0.2501690331304936,
+      "n_test": 1479,
+      "calibration_curve": {
+        "mean_predicted": [
+          0.1143,
+          0.1143,
+          0.1485,
+          0.1942,
+          0.2295,
+          0.2552,
+          0.2552,
+          0.3221,
+          0.4023,
+          0.4821
+        ],
+        "fraction_positive": [
+          0.1351,
+          0.1351,
+          0.1351,
+          0.1757,
+          0.2568,
+          0.3311,
+          0.2838,
+          0.2635,
+          0.3041,
+          0.483
+        ]
+      }
+    },
+    "winrate": {
+      "auc": 0.8686675441777483,
+      "log_loss": 0.44897353649139404,
+      "brier": 0.1477893441915512,
+      "positive_rate": 0.4995,
+      "n_test": 70000,
+      "calibration_curve": {
+        "mean_predicted": [
+          0.0258,
+          0.1032,
+          0.2026,
+          0.3125,
+          0.441,
+          0.5619,
+          0.6729,
+          0.7915,
+          0.8967,
+          0.9785
+        ],
+        "fraction_positive": [
+          0.024,
+          0.1103,
+          0.2087,
+          0.312,
+          0.4307,
+          0.5597,
+          0.672,
+          0.8021,
+          0.8953,
+          0.9801
+        ]
+      }
+    }
+  },
+  "feature_importances": {
+    "audience_segment=fashion_shoppers": 0.0595,
+    "audience_segment=gaming_community": 0.0536,
+    "ad_category=travel": 0.048,
+    "audience_segment=business_professionals": 0.0449,
+    "ad_category=sports": 0.0446,
+    "audience_segment=parents": 0.0425,
+    "audience_segment=sports_fans": 0.0404,
+    "ad_position=bottom": 0.0403,
+    "ad_category=electronics": 0.0401,
+    "ad_category=food": 0.039,
+    "audience_segment=students": 0.0366,
+    "ad_position=top": 0.0342,
+    "audience_segment=tech_enthusiasts": 0.0333,
+    "ad_position=sidebar": 0.0314,
+    "ad_category=gaming": 0.0282
+  },
+  "data_stats": {
+    "overall_ctr": 0.08451,
+    "overall_cvr": 0.02118,
+    "conversion_rate_of_clicks": 0.250621228257011
+  }
+}

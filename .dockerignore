@@ -1,0 +1,11 @@
+**/__pycache__/
+**/*.pyc
+.venv/
+venv/
+node_modules/
+frontend/build/
+.git/
+.github/
+backend/data/ad_auction_data_2*.csv
+**/.pytest_cache/
+*.md

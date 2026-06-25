@@ -1,0 +1,15 @@
+# Render Blueprint for the SmartBidder API (Docker web service, free tier).
+# Deploy: push to GitHub, then in the Render dashboard "New +" → "Blueprint" and
+# point it at this repo. Render builds backend/Dockerfile with the repo root as context.
+services:
+  - type: web
+    name: smartbidder-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: OMP_NUM_THREADS
+        value: "4"
